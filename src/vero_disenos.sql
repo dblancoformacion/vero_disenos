@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS veroDesing;
-CREATE DATABASE veroDesing;
-USE veroDesing;
+DROP DATABASE IF EXISTS vero_disenos;
+CREATE DATABASE vero_disenos;
+USE vero_disenos;
 
 CREATE TABLE clientes(
   id_cliente int AUTO_INCREMENT,
@@ -54,10 +54,10 @@ CREATE TABLE encargan(
   FOREIGN KEY (id_fichero) REFERENCES ficheros(id_fichero)
   );
 CREATE TABLE proveen(
-  id_proovedor int,
+  id_proveedor int,
   id_fichero int,
-  PRIMARY KEY (id_proovedor, id_fichero),
-  FOREIGN KEY (id_proovedor) REFERENCES proovedores(id_proovedor),
+  PRIMARY KEY (id_proveedor, id_fichero),
+  FOREIGN KEY (id_proveedor) REFERENCES proveedores(id_proveedor),
   FOREIGN KEY (id_fichero) REFERENCES ficheros(id_fichero)
   );
 CREATE TABLE fich_tipo(
